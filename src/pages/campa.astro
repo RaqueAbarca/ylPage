@@ -21,7 +21,7 @@ import Carusell from '../components/Carusell.astro';
 			</div>
 			<div class="descripcionCampa">
 				<div class="textoCampa">
-					<h2>En campamento podras vivir una experiencia unica!</h2>
+					<h2>En campa podras vivir una experiencia unica!</h2>
 					<h3>Esto es lo que te espera:</h3>
 					<p><b>Un lugar increible y lleno de diversión:</b> Nuestros campamentos son realizados en <a href="https://www.lamontana.net/home" target="_blank" >La Montaña Cristian Camps</a> desde las majestuosas montañas hasta las orillas de lagos cristalinos, nuestros campamentos se encuentran en lugares impresionantes. Explora entornos naturales que inspiran la maravilla y la conexión.
 					Actividades Inolvidables: Desde desafíos extremos hasta relajantes noches alrededor de la fogata, cada día está lleno de actividades que despiertan la emoción y fomentan el trabajo en equipo. ¡Prepárate para descubrir nuevas habilidades y pasiones!</p>
@@ -65,8 +65,25 @@ import Carusell from '../components/Carusell.astro';
 	}
 
 	@media (max-width: 720px) {
+
+		h1{
+			font-size: 55px;
+		}
+
+		h2{
+			font-size: 40px;
+		}
+		h3{
+			font-size: 30px;
+		}
+
+		.textoCampa{
+			margin: 0;
+		}
+
 		.descripcionCampa{
 			flex-direction: column;
+			margin: 10px;
 		}
 	}
 </style>
