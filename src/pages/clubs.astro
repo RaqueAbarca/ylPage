@@ -1,0 +1,43 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import CuadrosClubes from '../components/CuadrosClubes.astro';
+import Mapa from '../components/Mapa.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header title={SITE_TITLE} />
+		<main>
+            <div class="titulopagina">
+				<h1>Clubs</h1>
+			</div>
+			<div class="textoClubs">
+				<p>Contamos con reuniones semanales en diferentes partes de Alajuela, a estas reuniones les damos el nombre de Club. En un Club los jovenes pueden disfrutar, distraerse, socializar y escuchar de Jesús.</p>
+				<p>Tenemos Club para toda la poblacion de jovenes, pues contamos con nuestros clubes de Capernaum, los cuales estan enfocados a chicos con alguna discapacidad. Ademas de esto, tenemos Vidas Jovenes para madres jovenes y Universidad, para mayores de 18 años.</p>
+			</div>
+			<h2>Ubicaciones y horarios</h2>
+			<Mapa />
+			<CuadrosClubes />
+				
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+    	#videoCampa{
+		display: flex;
+		justify-content: center;
+	}
+
+	.textoClubs{
+		margin: 0 5em;
+	}
+</style>

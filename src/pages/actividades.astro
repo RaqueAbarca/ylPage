@@ -1,0 +1,213 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- <BaseHead /> -->
+	</head>
+	<body>
+		<Header />
+		<main>
+			<div class="titulopagina">
+				<h1>Actividades</h1>
+			</div>
+				<div class="previewClubs">
+					<div class="cajaPC">
+						<div class="textoPC">
+							<h2>Club</h2>
+							<p>Contamos con reuniones semanales en diferentes partes de Alajuela, estas reuniones les damos el nombre de Club. En un club los jovenes pueden disfrutar, distraerse, socializar y escuchar de Jesus.</p>
+							<p>Tenemos club para toda la poblacion de jovenes, pues contamos con nuestros clubes de Capernaum, los cuales estan enfocados a chicos con alguna discapacidad. Ademas de esto, tenemos Vidas Jovenes para madres jovenes y Universidad, para mayores de 18 años.</p>
+							<p>Si deseas conocer más, sobre nuestras reuniones, porfavor has click en el siguiente boton:</p>
+							<a href="/clubs" class="boton1">Conocer mas</a>
+						</div>
+						<div class="imgPC"><img src="/clubs/Desampa/desampaAlto.jpeg" alt="Imagen 1"></div>
+					</div>
+				</div>
+				
+				<div class="previewCampa">
+					<div class="imgBannerCampa" style="background-image: url(/campamento/auditorioCampo.jpeg);">
+						<h1>Campamentos</h1>
+						<h3>Los mejores 4 días de tu vida!</h3>
+						<p>Si tenes entre 14 y 23 años, acompañanos y viví una experiencia única.</p>
+						<a href="/campa" class="boton2">Más información</a>
+					</div>
+				</div>
+				<h1>Otras actividades</h1>
+				<div class="previewOtras">
+					<div class="imgActivPrew" style="background-image: url(/otrasActividadesIMG/aleman.jpeg)">
+					<h3>Clases de alemán</h3>
+					<p>Te esperamos!</p>
+					<a href="/clubs" class="botonVerMas">Ver más...</a>
+					</div>
+					<div class="imgActivPrew" style="background-image: url(/otrasActividadesIMG/SDTYL.jpeg)">
+						<h3>Show de talentos</h3>
+						<a href="/clubs" class="botonVerMas">Ver más...</a>
+					</div>
+					<div class="imgActivPrew" style="background-image: url(/otrasActividadesIMG/patinada.jpeg)">
+						<h3>Mega Patinada</h3>
+						<a href="/clubs" class="botonVerMas">Ver más...</a>
+					</div>
+					<div class="imgActivPrewNext" style="background-image: url(/otrasActividadesIMG/mamon.jpeg)">
+						<a href="/otrasactividades" class="botonVerMas">Ver otras actividades...</a>
+					</div>
+				</div>
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	.imgActivPrewNext{
+		background-position: center; 
+		background-size: cover;
+		border-radius: 5%; 
+		width: 300px;
+		height: 500px;
+		margin: 30px 5px 5px 5px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		background-repeat: no-repeat;
+		position: relative;
+		z-index: 1; 
+		color: rgb(255, 255, 255);
+	}
+
+	.imgActivPrewNext::after{
+		content: "";
+		position: absolute;
+		border-radius: 5%;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(to right, rgba(0, 0, 0, 0.724), #000000d8, #000000);
+		z-index: -1;
+	}
+
+	.botonVerMas{
+		margin: 0 40px 10px;
+		text-align: center;
+		display: inline-block;
+        padding: 10px 20px;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 20px;
+	}
+
+	.imgActivPrew{
+		background-position: center; 
+		background-size: cover;
+		border-radius: 5%; 
+		width: 370px;
+		height: 500px;
+		margin: 30px 5px 5px 5px;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		background-repeat: no-repeat;
+		position: relative;
+		z-index: 1; 
+		color: rgb(255, 255, 255);
+	}
+
+	.imgActivPrew::after{
+		content: "";
+		position: absolute;
+		border-radius: 5%;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(#00879300, rgba(0, 0, 0, 0.306), #000000ea);
+		z-index: -1;
+	}
+
+	.imgActivPrew p{
+		margin: -20px 0 0 0;
+		text-align: center;
+	}
+	.previewCampa{
+		display: flex;
+		justify-content: center;
+		margin-bottom: 4em;
+	}
+
+
+	.imgBannerCampa{
+		background-position: center; 
+		background-size: cover;
+		width: 100%;
+		height: 30em;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		background-repeat: no-repeat;
+		position: relative;
+		z-index: 1; 
+		color: white;
+		align-items: center;
+	}
+	.imgBannerCampa::after{
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(rgba(0, 0, 0, 0.237), #000000);
+		z-index: -1;
+	}
+
+	.cajaPC{
+		margin: 2em;
+		padding: 1.5em;
+		box-shadow: 0 2px 8px rgba(var(--black), 55%);
+		display: flex;
+		align-items: center;
+		background-color: var(--verdeYL);
+		color: white;
+	}
+
+	.imgPC{
+		max-width: 500px;
+		margin-left: 1em;
+	}
+
+	.textoPC h2{
+		text-align: left !important;
+	}
+
+	.boton1 {
+        display: inline-block;
+        padding: 15px 30px;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 18px;
+        background-color: rgb(0, 0, 0);
+    }
+
+	.boton2 {
+        display: inline-block;
+        padding: 15px 30px;
+        color: #000000;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 18px;
+        background-color: rgb(255, 255, 255);
+    }
+
+	.previewOtras{
+        display: flex;
+        justify-content: space-evenly;
+    }
+</style>

@@ -1,0 +1,83 @@
+<body>
+    <div class="carousel-container">
+        <div class="carousel">
+            <div class="carousel-slide" style="background-image: url(/campamento/chicas.JPG);"></div>
+            <div class="carousel-slide" style="background-image: url(/campamento/campaNuevosI2023.JPEG);"></div>
+            <div class="carousel-slide" style="background-image: url(/campamento/auditorioCampo.jpeg);"></div>
+            <div class="carousel-slide" style="background-image: url(/campamento/equipoRojo.jpg);"></div>
+            <div class="carousel-slide" style="background-image: url(/campamento/campaCreci5.jpg);"></div>
+            <div class="carousel-slide" style="background-image: url(/campamento/campaCreci1.jpg);"></div>
+            <div class="carousel-slide" style="background-image: url(/campamento/campaCreci2.jpg);"></div>
+            <div class="carousel-slide" style="background-image: url(/campamento/campaCreci3.jpg);"></div>
+            <div class="carousel-slide" style="background-image: url(/campamento/campaCreci4.jpg);"></div>
+            <div class="carousel-slide" style="background-image: url(/campamento/cuerdasaltas.jpeg);"></div>
+            <div class="carousel-slide" style="background-image: url(/campamento/bryanzbeto.jpeg);"></div>
+            <div class="carousel-slide" style="background-image: url(/campamento/laguna.jpeg);"></div>
+            <div class="carousel-slide" style="background-image: url(/campamento/llegandoacampa.JPG);"></div>
+            <div class="carousel-slide" style="background-image: url(/campamento/tiempoasolas.JPG);"></div>
+            <div class="carousel-slide" style="background-image: url(/campamento/esaubeto.jpeg);"></div>
+            <div class="carousel-slide" style="background-image: url(/campamento/abrazo.JPG;"></div>
+        </div>
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const carousel = document.querySelector('.carousel-container .carousel');
+        const slides = document.querySelectorAll('.carousel-container .carousel-slide');
+        var tamPantalla = screen.width * 0.891;
+        let currentIndex = 0;
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slides.length;
+            updateCarousel();
+        }
+
+        function updateCarousel() {
+            if (carousel instanceof HTMLElement) {
+                const offset = -currentIndex * tamPantalla; // Ancho de la imagen
+                carousel.style.transform = `translateX(${offset}px)`;
+            }
+        }
+
+        setInterval(nextSlide, 3500); // Cambia la imagen cada 3 segundos
+
+        updateCarousel();
+    });
+
+    </script>
+</body>
+
+
+<style>
+    .carousel-container {
+        width: 90%; /* Ajusta el ancho deseado del carrusel */
+        overflow: hidden;  /* Esto para que se vea o no la imagen anterior/posterior*/
+        margin: auto;
+    }
+
+    .carousel {
+        display: flex;
+        transition: transform 1s ease; /* Agregar una transición a la propiedad 'transform' */
+        align-items: center;
+    }
+
+    .carousel-slide {
+        flex: 0 0 100%;
+        background-position: center; 
+        background-size: cover;
+        width: 90%;
+        height: 700px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        background-repeat: no-repeat;
+        position: relative;
+        z-index: 1; 
+        }
+
+    @media (max-width: 720px) {
+	.carousel-slide{
+        height: ;
+    }
+	}
+</style>

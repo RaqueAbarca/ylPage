@@ -1,0 +1,137 @@
+<div id="carrusel-contenido">
+    <div id="carrusel-caja">
+        <div class="carrusel-elemento">
+            <img class="imagenes" src="/campamento/chicas.JPG" >
+        </div>
+        <div class="carrusel-elemento">   
+            <img class="imagenes" src="/campamento/campaNuevosI2023.JPEG">
+        </div>
+        <div class="carrusel-elemento">   
+            <img src="/campamento/auditorioCampo.jpeg">                        
+        </div>
+    </div>
+</div>
+
+  <style>
+
+#carrusel-caja {
+    -moz-animation: automatizacion 15s infinite linear;
+    -o-animation: automatizacion 15s infinite linear;
+    -webkit-animation: automatizacion 15s infinite linear;
+    animation: automatizacion 15s infinite linear;
+
+    -webkit-transition: all 0.75s ease;
+    -moz-transition: all 0.75s ease;
+    -ms-transition: all 0.75s ease;
+    -o-transition: all 0.75s ease;
+    transition: all 0.75s ease;
+
+    height: 450px;
+    width: 140%;
+}
+
+#carrusel-contenido {
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.imagenes{
+    width: auto; /* Ajusta el ancho y alto deseado de las imágenes */
+    height: 450px;
+}
+
+.carrusel-elemento {
+    float: left;
+    width: 33.333%;
+}
+
+@-moz-keyframes automatizacion {
+    0% {
+        margin-left: 0;
+    }
+
+    30% {
+        margin-left: 0;
+    }
+
+    35% {
+        margin-left: -100%;
+    }
+
+    65% {
+        margin-left: -100%;
+    }
+
+    70% {
+        margin-left: -200%;
+    }
+
+    95% {
+        margin-left: -200%;
+    }
+
+    100% {
+        margin-left: 0;
+    }
+}
+
+@-webkit-keyframes automatizacion {
+    0% {
+        margin-left: 0;
+    }
+
+    30% {
+        margin-left: 0;
+    }
+
+    35% {
+        margin-left: -100%;
+    }
+
+    65% {
+        margin-left: -100%;
+    }
+
+    70% {
+        margin-left: -200%;
+    }
+
+    95% {
+        margin-left: -200%;
+    }
+
+    100% {
+        margin-left: 0;
+    }
+}
+
+@keyframes automatizacion {
+    0% {
+        margin-left: 0;
+    }
+
+    30% {
+        margin-left: 0;
+    }
+
+    35% {
+        margin-left: -100%;
+    }
+
+    65% {
+        margin-left: -100%;
+    }
+
+    70% {
+        margin-left: -200%;
+    }
+
+    95% {
+        margin-left: -200%;
+    }
+
+    100% {
+        margin-left: 0;
+    }
+}
+  </style>

@@ -1,16 +1,63 @@
 ---
-
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import TestimoniosPreview from '../components/TestimoniosPreview.astro';
+import CuadrosPreviewIndex from '../components/CuadrosPreviewIndex.astro';
 ---
 
+<!doctype html>
 <html lang="en">
 	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<!--<BaseHead />-->
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<Header />
+		<main>
+			<img id="YLhero" src="/Inicio.png" alt="Imagen 1">
+			<a href="/about" class="quieroFormarParteBtn">Quiero formar parte!</a>
+			<CuadrosPreviewIndex />
+			<h1>Testimonios</h1>
+			<TestimoniosPreview />
+		</main>
+		<Footer />
 	</body>
 </html>
+
+<style>
+
+	#YLhero{
+		border-radius: 0%;
+		box-shadow: 0 2px 8px rgba(var(--black), 55%);
+		width: 100%;
+		position: relative;
+	}
+
+	.quieroFormarParteBtn{
+		display: inline-block;
+        padding: 15px 30px;
+        color: #000000;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 18px;
+        background-color: rgb(255, 255, 255);
+		position: absolute;
+		top: 90%;
+		left: 42%;
+	}
+
+	.quieroFormarParteBtn:hover{
+		display: inline-block;
+        padding: 15px 30px;
+        color: #000000;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 18px;
+        background-color: rgb(227, 227, 227);
+		position: absolute;
+		top: 90%;
+		left: 42%;
+	}
+</style>

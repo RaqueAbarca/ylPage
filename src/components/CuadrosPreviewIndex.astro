@@ -1,0 +1,83 @@
+<div class="previewIndexZone">
+    <div class="flex-container">
+        <div class="flex-box">
+            <div class="previewIndex">
+                <h2>Sobre nosotros</h2>
+                <p>Somos parte de Young Life Costa Rica, una organización sin fines de lucro.</p>
+                <p>Nuestra mision es que todos los jovenes de la provincia de Alajuela tengan la oportunidad de conocer a Jesus</p>
+                <p>Estamos en los cantones de Alajuela, Canoas, Carrizal, Barrio San Jose, Desamparados y El Carmen</p>
+                <a href="/about" class="boton">Conocer mas</a>
+            </div>
+        </div>
+        <div class="flex-box">
+            <img src="/clubs/Universidad/YLU.jpeg" alt="Imagen 1" class="multiPIndex">
+        </div>
+    </div>
+
+    <div class="flex-container">
+        <div class="flex-box">
+            <video src="/showtalentos.mp4" class="multiPIndex" autoplay muted loop></video>
+        </div>
+        <div class="flex-box">
+            <div class="previewIndex">
+                <h2>Actividades</h2>
+                <p>Tenemos varias actividades, por ejemplo, los clubes, en los cuales nos reunimos semanalmente para que los jovenes se diviertan y escuchen de Jesús</p>
+                <p>Tambien tenemos campamento 2 veces al año, en el cual los jovenes conocen sobre el amor de Jesus a mayor profundidad.</p>
+                <p>Para recaudar fondos, hacemos distintas actividades y ventas.</p>
+                <a href="/actividades" class="boton">Conocer mas</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .previewIndexZone{
+        margin-bottom: 50px;
+    }
+	.flex-container {
+    display: flex;
+    justify-content: center; /* Alinea horizontalmente al centro */
+    align-items: center
+    }
+
+    .flex-box {
+        text-align: center;
+        padding: 20px;
+        max-width: 800px;
+    }
+
+    .previewIndex {
+        background: var(--verdeYL); /* Color de fondo del botón */
+        box-shadow: 0 2px 8px rgba(var(--black), 55%);
+        padding: 20px;
+        color: #fff;
+        min-width: 300px;
+    }
+
+    .multiPIndex{
+        max-width: 600px;
+    }
+
+    .boton {
+        display: inline-block;
+        padding: 15px 30px;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 18px;
+        background-color: rgb(0, 0, 0);
+    }
+    @media (max-width: 720px) {
+        .multiPIndex{
+        max-width: 300px;
+        }
+
+        .flex-container {
+        display: flex;
+        justify-content: center; /* Alinea horizontalmente al centro */
+        align-items: center;
+        flex-direction: column;
+    }
+    }
+</style>

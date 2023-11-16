@@ -1,0 +1,130 @@
+<div>
+    <div class="fondoMapa">
+        <img id="YLhero" src="/mapa.jpeg" alt="Imagen 1">
+            <a class="location-pin" id="pinAlajuela" href="/actividades">
+                <i class="fa-solid fa-location-pin fa-3x" style="color: var(--amarillo);"></i>
+                <div class="info">
+                    <h3>Alajuela*</h3>
+                    <p>Caper/VidasJovenes</p>
+                    <p>Lugar: Salon Comunal de Desamparados</p>
+                    <p>Hora: 5:00pm</p>
+                </div>
+            </a>
+            <a class="location-pin" id="pinDesampa" href="/actividades">
+                <i class="fa-solid fa-location-pin fa-3x" style="color: var(--turqueza)"></i>
+                <div class="info">
+                    <h3>Desamparados</h3>
+                    <p>Lugar: Salon Comunal de Desamparados</p>
+                    <p>Hora: 5:00pm</p>
+                </div>
+            </a>
+            <a class="location-pin" id="pinCanoas" href="/actividades">
+                <i class="fa-solid fa-location-pin fa-3x" style="color: var(--verdeYL)"></i>
+                <div class="info">
+                    <h3>Canoas</h3>
+                    <p>Lugar: Salon Comunal de Desamparados</p>
+                    <p>Hora: 5:00pm</p>
+                </div>
+            </a>
+            <a  class="location-pin"id="pinCarrizal" href="/actividades">
+                <i class="fa-solid fa-location-pin fa-3x" style="color: var(--amarillo)"></i>
+                <div class="info">
+                    <h3>Carrizal</h3>
+                    <p>Lugar: Salon Comunal de Desamparados</p>
+                    <p>Hora: 5:00pm</p>
+                </div>
+            </a>
+            <a class="location-pin" id="pinCarmen" href="/actividades">
+                <i class="fa-solid fa-location-pin fa-3x" style="color: var(--turqueza)"></i>
+                <div class="info">
+                    <h3>El Carmen</h3>
+                    <p>Lugar: Salon Comunal de Desamparados</p>
+                    <p>Hora: 5:00pm</p>
+                </div>
+            </a>
+            <a class="location-pin" id="pinBarrio" href="/actividades">
+                <i class="fa-solid fa-location-pin fa-3x" style="color: var(--verdeYL)"></i>
+                <div class="info">
+                    <h3>Barrio</h3>
+                    <p>Lugar: Salon Comunal de Desamparados</p>
+                    <p>Hora: 5:00pm</p>
+                </div>
+            </a>
+    </div>
+    
+    
+</div>
+
+<style>
+    .fondoMapa{
+        position:relative;
+        z-index: 2;
+    }
+
+    .location-pin {
+        position: relative;
+        transition: transform 0.4s;
+    }
+
+    .location-pin .fa-location-pin {
+        font-size: 3x;
+        transition: transform 0.4s; /* Agrega una transición suave */
+    }
+
+    /* Estilo para los iconos cuando se hace hover */
+    .location-pin:hover .fa-location-pin {
+        transform: scale(1.7); /* Hace el icono 20% más grande al hacer hover */
+    }
+
+    .location-pin .info {
+        position: absolute;
+        color: black;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 5%;
+        padding: 10px;
+        display: none;
+        transform: scale(0); /* Inicialmente oculto y en escala 0 */
+        transition: transform 0.5s, display 0.5s;
+        top: 20%; /* Alinea verticalmente en el centro */
+        left: 100%; /* Posición a la derecha del icono */
+        transform-origin: left top; /* Establece el origen de la transformación */
+    }
+
+    .location-pin:hover .info {
+        display: block;
+        transform: scale(1);
+    }
+    
+    #pinAlajuela{
+        position:absolute;
+        left: 45.5%;
+        bottom: 17%;
+    }
+
+    #pinDesampa{
+        position:absolute;
+        left:54.5%;
+        bottom:20%;
+    }
+    #pinCanoas{
+        position:absolute;
+        left:48.5%;
+        bottom:25%;
+    }
+    #pinCarrizal{
+        position:absolute;
+        left:63.5%;
+        bottom:75%;
+    }
+    #pinCarmen{
+        position:absolute;
+        left:43.5%;
+        bottom:6%;
+    }
+    #pinBarrio{
+        position:absolute;
+        left:35.5%;
+        bottom:10%;
+    }
+    </style>

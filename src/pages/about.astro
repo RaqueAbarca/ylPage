@@ -1,0 +1,95 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Equipo from '../components/Equipo.astro';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<!--<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} -->
+	</head>
+	<body>
+		<Header/>
+		<main>
+			<div class="titulopagina">
+				<h1>Sobre Nosotros</h1>
+			</div>
+			<div class="sobreNosotros">
+				<div class="cuadrosTexto1">
+					<h2>Historia de la organización</h2>
+					<p>Young Life es una organización cristiana que se enfoca en el ministerio con adolescentes y jóvenes. Su objetivo principal es ayudar a los jóvenes a desarrollar relaciones significativas y crecer en su fe. Llevan a cabo programas y actividades que incluyen campamentos, reuniones de club, eventos sociales y estudios bíblicos diseñados para conectar con los jóvenes en un ambiente amigable y accesible.</p>
+
+					<p>En Costa Rica, Young Life ha estado activo en varias comunidades y regiones durante muchos años. Han establecido clubes y grupos de jóvenes en escuelas, iglesias y comunidades locales para brindar apoyo, orientación espiritual y oportunidades de crecimiento a los jóvenes costarricenses. A través de actividades como campamentos y viajes misioneros, Young Life ha brindado a los jóvenes la oportunidad de experimentar la fe en un contexto de comunidad y amistad.</p>
+				</div>
+				<div class="cuadrosTexto2">
+					<h2>Mision</h2>
+					<p>La misión de Young Life es "introducir a los adolescentes a Jesucristo y ayudarlos a crecer en su fe". La organización busca establecer relaciones significativas con los jóvenes, ofreciendo un ambiente de apoyo y amistad en el que puedan explorar su fe y desarrollar una relación con Jesucristo.</p>
+				</div>
+				<div class="cuadrosTexto3">
+					<h2>Valores</h2>
+					<ul>
+						<li>Relaciones Personales: Young Life cree en la importancia de establecer relaciones auténticas y personales con los jóvenes, mostrándoles el amor y el cuidado de Jesucristo a través de la amistad.</li>
+						<li>Inclusividad: Young Life se esfuerza por ser una organización inclusiva que da la bienvenida a todos los jóvenes, independientemente de su trasfondo, fe o creencias.</li>
+						<li>Relevancia: La organización busca relacionarse con los jóvenes en su propio contexto, utilizando un lenguaje y actividades que resuenen con ellos.</li>
+						<li>Diversión: Young Life valora la diversión y la alegría como parte integral de su enfoque. Organizan actividades y eventos divertidos para conectarse con los jóvenes.</li>
+						<li>Fe en Acción: Young Life alienta a los jóvenes a vivir su fe de manera activa, impactando positivamente en su comunidad y en el mundo que les rodea.</li>
+						<li>Excelencia: La organización se esfuerza por mantener altos estándares de calidad en todo lo que hace, desde programas y campamentos hasta relaciones personales con los jóvenes.</li>
+						<li>Oración: Young Life reconoce la importancia de la oración como una parte esencial de su ministerio y busca la guía divina en todas sus actividades.
+
+						</li>
+					</ul>
+				</div>
+			</div>
+			<h2>Equipo directivo y personal clave</h2>
+			<Equipo />
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+
+	.sobreNosotros{
+		padding: 0 20px 20px 20px;
+		border-radius: 0%;
+		display: flex;
+		align-items: baseline;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+
+	.cuadrosTexto1{
+		margin: 10px;
+		background: var(--amarillo);
+        box-shadow: 0 2px 8px rgba(var(--black),55%);
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+		max-width: 900px;
+	}
+	.cuadrosTexto2{
+		margin: 15px;
+		background: var(--verdeYL);
+        box-shadow: 0 2px 8px rgba(var(--black),55%);
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+		color: white;
+		max-width: 400px;
+	}
+	.cuadrosTexto3{
+		margin: 15px;
+		background: rgb(202, 71, 71);
+        box-shadow: 0 2px 8px rgba(var(--black),55%);
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+		color: rgb(255, 255, 255);
+		
+	}
+</style>
