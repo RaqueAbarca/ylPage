@@ -24,7 +24,7 @@ import Footer from '../components/Footer.astro';
 							<p>Si deseas conocer más, sobre nuestras reuniones, porfavor has click en el siguiente boton:</p>
 							<a href="/clubs" class="boton1">Conocer mas</a>
 						</div>
-						<div class="imgPC"><img src="/clubs/Desampa/desampaAlto.jpeg" alt="Imagen 1"></div>
+						<div class="imgPC"><img id="imgDesampaPC" src="/clubs/Desampa/desampaAlto.jpeg" alt="Imagen 1"></div>
 					</div>
 				</div>
 				
@@ -210,4 +210,32 @@ import Footer from '../components/Footer.astro';
         display: flex;
         justify-content: space-evenly;
     }
+
+	@media (max-width: 720px) {
+		#imgDesampaPC{
+			display: none;
+		}
+
+		.imgBannerCampa p{
+			padding: 0 2em 1em;
+			text-align: center;
+		}
+
+		.imgBannerCampa h1{
+				padding: 0 2em 0.5em;
+		}
+
+		.imgBannerCampa h3{
+				padding: 0 2em;
+		}
+
+		.previewOtras{
+			flex-wrap: wrap
+    	}
+
+		.imgActivPrewNext{
+			width: 370px;
+		}
+	}
+
 </style>

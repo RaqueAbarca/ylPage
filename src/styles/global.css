@@ -223,6 +223,11 @@ nav a.active {
 	.flex-containerTesti{
 		flex-direction: column;
 	}
+
+	.imgProfile{
+		width: 350px;
+		height: 350px;
+	}
 }
 
 .sr-only {
