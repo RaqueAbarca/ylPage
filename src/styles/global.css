@@ -194,13 +194,9 @@ hr {
 	body {
 		font-size: 18px;
 	}
-	
-	main {
-		
-	}
 
 	h1{
-		font-size: 65px;
+		font-size: 60px;
 	}
 
 	.internal-links{
@@ -210,8 +206,6 @@ hr {
 	.flex-containerTesti{
 		flex-direction: column;
 	}
-
-
 }
 
 .sr-only {
