@@ -73,4 +73,54 @@ import HeaderLink from './HeaderLink.astro';
     .submenuLinks.active{
         text-decoration: none;
     }
+
+    @media (max-width: 720px){
+        .internal-links {
+        display: none; /* Oculta el menú por defecto en pantallas pequeñas */
+        flex-direction: column; /* Cambia la dirección a columna */
+        background-color: rgba(255, 255, 255, 0.745); /* Fondo blanco semi-transparente */
+        position: fixed; /* Fija el menú en la parte superior */
+        width: 50%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 100;
+        backdrop-filter: blur(7px); /* Efecto de desenfoque */
+        padding: 20px; /* Añade un poco de espacio alrededor */
+        animation-name: example;
+        animation-duration: 2s;
+        animation-iteration-count: 1;
+    }
+
+    @keyframes example {
+        0%   {background-color:rgb(255, 255, 255); left:-300px; top:0px; right: 500px;}
+        25%  {background-color:rgb(255, 255, 255); left:0px; top:0px;}
+    }
+
+    .internal-links.expanded {
+        display: flex;
+        right: 50%;
+    }
+
+    .internal-links ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+
+    .palabrasMenu {
+        padding: 0.3em;
+        margin: 0.5em;
+        color: var(--black) !important;
+        border-bottom: 4px solid transparent;
+        text-decoration: none;
+    }
+
+    .palabrasMenu.expanded {
+        text-decoration: none;
+        border-bottom-color: var(--amarillo);
+    }
+    }
 </style>

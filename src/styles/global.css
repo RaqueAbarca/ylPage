@@ -220,16 +220,6 @@ nav a.active {
 		font-size: 60px;
 	}
 
-	.internal-links{
-		display: none;
-		flex-direction: column;
-	}
-
-	.expanded {
-		display: unset;
-		background-color: #839345;
-	}
-
 	.flex-containerTesti{
 		flex-direction: column;
 	}
