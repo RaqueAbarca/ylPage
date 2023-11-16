@@ -1,26 +1,15 @@
 ---
+import type { navigate } from 'astro:transitions/client';
 import HeaderLink from './HeaderLink.astro';
+import Lineas from './Lineas.astro';
+import Navigation from './Navigation.astro';
 ---
 
 <header>
 	<nav>
 		<div class="logo"><a href="/"><img src="/LogoYL.png" alt="Logo de la organización"></a></div>
-		<div class="internal-links">
-			<ul>
-				<li><HeaderLink href="/">Inicio</HeaderLink></li>
-				<li><HeaderLink href="/about">Sobre nosotros</HeaderLink></li>
-				<li><HeaderLink href="/actividades">Actividades</HeaderLink>
-					<ul>
-					<li><HeaderLink class="submenuLinks" href="/clubs">Clubs</HeaderLink></li>
-					<li><HeaderLink class="submenuLinks"href="/campa">Campamentos</HeaderLink></li>
-					<li><HeaderLink class="submenuLinks"href="/otrasactividades">Otros</HeaderLink></li>
-					</ul>
-				</li>
-				<li><HeaderLink href="/contacto">Contacto</HeaderLink></li>
-				<li><HeaderLink href="/donaciones">Donaciones</HeaderLink></li>
-				<li><HeaderLink href="/testimonios">Testimonios</HeaderLink></li>
-			</ul>
-		</div>
+		<Lineas />
+		<Navigation />
 		<div class="social-links">
 			<a href="https://www.instagram.com/younglifecr.metroalajuela" target="_blank">
 				<span class="sr-only">Follow Astro on Mastodon</span>
@@ -45,75 +34,13 @@ import HeaderLink from './HeaderLink.astro';
 		background: white;
 		box-shadow: 0 2px 8px rgba(var(--black), 55%);
 	}
-	h2 {
-		margin: 0;
-		font-size: 1em;
-	}
 
-	h2 a,
-	h2 a.active {
-		text-decoration: none;
-	}
-	nav {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-	}
-	nav a {
-		padding: 1em 0.5em;
-		color: var(--black);
-		border-bottom: 4px solid transparent;
-		text-decoration: none;
-	}
+	
 
-	nav a:hover{
-		color: var(--verdeYL);
-	}
-
-	nav a.active {
-		text-decoration: none;
-		border-bottom-color: var(--amarillo);
-	}
-
-	nav ul ul {
-    display: none;
-	background-color: rgb(238, 238, 238);
-    position: absolute;
-    top: 50%;
-    left: 0;
-	}
-
-	nav li:hover > ul {
-		display: inherit;
-	}
 	.social-links,
 	.social-links a {
 		display: flex;
 	}
-	nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-	}
-
-	nav li {
-		display: inline-block;
-		position: relative;
-	}
-
-	nav ul ul {
-    display: none;
-    position: absolute;
-    top: 90%;
-    left: 0;
-	padding: 0%;
-	}
-
-	.submenuLinks{
-	padding: 0.5em !important;
-	}
-
-	
 
 	.logo{
   		width: 90px; /* Ajusta el tamaño del logotipo según tus preferencias */
@@ -136,3 +63,7 @@ import HeaderLink from './HeaderLink.astro';
 		}
 	}
 </style>
+
+<script>
+    import "../scripts/menu.js";
+</script>

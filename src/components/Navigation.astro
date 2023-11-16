@@ -1,0 +1,76 @@
+---
+import HeaderLink from './HeaderLink.astro';
+---
+<div class="internal-links">
+    <ul>
+        <li><HeaderLink class="palabrasMenu" href="/">Inicio</HeaderLink></li>
+        <li><HeaderLink class="palabrasMenu" href="/about">Sobre nosotros</HeaderLink></li>
+        <li><HeaderLink class="palabrasMenu" href="/actividades">Actividades</HeaderLink>
+            <ul>
+            <li><HeaderLink class="submenuLinks" href="/clubs">Clubs</HeaderLink></li>
+            <li><HeaderLink class="submenuLinks"href="/campa">Campamentos</HeaderLink></li>
+            <li><HeaderLink class="submenuLinks"href="/otrasactividades">Otros</HeaderLink></li>
+            </ul>
+        </li>
+        <li><HeaderLink class="palabrasMenu" href="/contacto">Contacto</HeaderLink></li>
+        <li><HeaderLink class="palabrasMenu" href="/donaciones">Donaciones</HeaderLink></li>
+        <li><HeaderLink class="palabrasMenu" href="/testimonios">Testimonios</HeaderLink></li>
+    </ul>
+</div>
+
+<style>
+    .palabrasMenu {
+        padding: 1em 0.5em;
+        color: var(--black) !important;
+        border-bottom: 4px solid transparent;
+        text-decoration: none;
+    }
+
+    .internal-links li:hover {
+        color: var(--verdeYL);
+    }
+
+    .palabrasMenu.active {
+        text-decoration: none;
+        border-bottom-color: var(--amarillo);
+    }
+
+    .internal-links ul ul {
+        display: none;
+        background-color: rgb(238, 238, 238);
+        position: absolute;
+        top: 80%;
+        left: 0;
+        z-index: 1;
+    }
+
+    .internal-links li:hover > ul {
+        display: inherit;
+        
+    }
+    
+    .internal-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    }
+
+    .internal-links li {
+        display: inline-block;
+        position: relative;
+    }
+
+    .submenuLinks{
+    padding: 0.5em !important;
+    color: black;
+    text-decoration: none;
+    }
+
+    .submenuLinks:hover{
+        color: var(--verdeYL);
+    }
+
+    .submenuLinks.active{
+        text-decoration: none;
+    }
+</style>

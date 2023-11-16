@@ -190,6 +190,27 @@ hr {
     background-color: rgb(255, 208, 108)
 }
 
+nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+nav a {
+	padding: 1em 0.5em;
+	color: var(--black);
+	border-bottom: 4px solid transparent;
+	text-decoration: none;
+}
+
+nav a:hover{
+	color: var(--verdeYL);
+}
+
+nav a.active {
+	text-decoration: none;
+	border-bottom-color: var(--amarillo);
+}
+
 @media (max-width: 720px) {
 	body {
 		font-size: 18px;
@@ -201,6 +222,12 @@ hr {
 
 	.internal-links{
 		display: none;
+		flex-direction: column;
+	}
+
+	.expanded {
+		display: unset;
+		background-color: #839345;
 	}
 
 	.flex-containerTesti{
