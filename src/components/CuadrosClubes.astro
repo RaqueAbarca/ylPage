@@ -17,8 +17,6 @@
         <p>Lugar: Salón Guadalupe</p>
         <p>Hora: 4:40pm</p>
     </div>
-</div>
-<div class="imagenesClubs">
     <div class="imgClubs" id="amarillo" style="background-image: url(/clubs/Alajuela/alajuela.jpeg);">
         <h3>Alajuela</h3>
         <p>Jueves</p>
@@ -37,8 +35,6 @@
         <p>Lugar: Salón El Plan</p>
         <p>Hora: 4:50pm</p>
     </div>
-</div>
-<div class="imagenesClubs">
     <div class="imgClubs" id="amarillo" style="background-image: url(/clubs/Universidad/YLU.jpeg);">
         <h3>Universidad</h3>
         <p>Viernes</p>
@@ -56,8 +52,6 @@
         <p>Nuevo horario</p>
         <p>proximamente</p>
     </div>
-</div>
-<div class="imagenesClubs">
     <div class="imgClubs" id="amarillo" style="background-image: url(/clubs/VJsAlajuela/vjsA.jpeg);">
         <h3>Vidas Jóvenes Alajuela</h3>
         <p>1er sábado del mes</p>
@@ -88,6 +82,7 @@
     .imagenesClubs{
         display: flex;
         justify-content: space-evenly;
+        flex-wrap: wrap;
     }
 
     .imgClubs{
@@ -127,6 +122,23 @@
     .imgClubs p{
         margin: 0px;
         text-align: center;
+    }
+
+    @media(max-width: 720px){
+        .imgClubs{
+            border-radius: 20%; 
+            width: 350px;
+            height: 350px;
+            margin: 30px 5px 5px 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            background-repeat: no-repeat;
+            position: relative;
+            z-index: 1; 
+            color: white;
+            transition: transform 0.4s;      
+        }
     }
 
 </style>

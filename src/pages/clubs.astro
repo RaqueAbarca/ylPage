@@ -31,12 +31,14 @@ import Mapa from '../components/Mapa.astro';
 </html>
 
 <style>
-    	#videoCampa{
-		display: flex;
-		justify-content: center;
-	}
 
 	.textoClubs{
 		margin: 0 5em;
+	}
+
+	@media (max-width: 720px) {
+		.textoClubs{
+			margin: 40px;
+		}
 	}
 </style>
